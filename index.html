@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RYEN</title>
+   
+   <style>
+   /* RESET */
+@media (max-width: 600px) {
+   body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background:#4a0538;
+        }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+    gap: 15px;
+    min-height: 50px;
+    padding: 10px;
+        }
+
+header {
+    grid-area: header;
+    padding: 10px;
+    text-align: center;
+    position: sticky;
+    border-radius: 10px;
+    top: 0;
+  background:#520738;   
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    z-index: 1000;
+}
+
+.aside {
+    grid-area: sidebar;
+    background:#7d2354;            
+    padding: 10px;
+    position: sticky;
+    top: 0; 
+    align-self: start;
+    height: 100vh;
+}
+
+.aside h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 25px;
+    color: #a51686;
+    text-align: center;
+    font-style: bold;
+}
+
+.aside ul {
+    list-style: none;             
+    padding: 0;
+    margin: 0;
+}
+
+.aside li {
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: rgba(180, 96, 175, 0.582); 
+    color: #000000;
+    font-size: 15px;
+    font-style: normal;
+    border-radius: 6px;
+    gap: 20px;
+}
+.aside li:hover {
+    background: #4d0142; 
+    color: #630538;
+}
+
+
+ main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    
+}
+
+.box {
+    background: #905085;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    height: 350px;
+}
+        
+.box:hover{
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 10px 20px ;
+    background: #853c60; 
+
+}
+       
+.box h1{
+    font-size: 10px;
+    color: #020000;   
+}
+
+.box p {
+    font-size: 15px;
+    color: #020000;
+}
+
+.box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+footer {
+    grid-area: footer;
+   background:#6d0651; 
+    color: #ffffff;
+    text-align: center;
+    font-size: 25px;
+    padding: 35px;
+    z-index: 10;
+}
+
+body {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "content"
+            "footer";
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    nav ul li {
+        flex: 1 1 45%;
+        margin-bottom: 0;
+    }
+
+    nav ul li a {
+        text-align: center;
+        transform: none;
+    }
+
+    .food-card img {
+        height: 160px;
+    }
+}
+        @media (min-width: 601px) and (max-width: 900px) {
+    body {
+        grid-template-columns: 200px 1fr;
+    }
+
+    .food-card img {
+        height: 180px;
+    }
+}
+        @media (min-width: 901px) and (max-width: 1200px) {
+    body {
+        grid-template-columns: 260px 1fr;
+    }
+
+    .food-card img {
+        height: 200px;
+    }
+}
+        @media (min-width: 1201px) {
+    body {
+        grid-template-columns: 300px 1fr;
+        max-width: 1400px;
+        margin: auto;
+    }
+
+    .food-card img {
+        height: 220px;
+    }
+}
+
+</style>                        
+</head>
+<body>
+
+<div class="grid-container">
+
+    <header>
+        <h1>WHAT'S YOUR MAKE-UP!</h1>
+    </header>
+
+    <div class="aside">
+        <h2>Makeup Products Names</h2>
+        <ul>
+            <li>MASCARA</li>
+            <li>FOUNDATION</li>
+            <li>EYESHADOW</li>
+            <li>CONCEALER</li>
+            <li>LIPSTICK</li>
+            <li>BLUSH</li>
+        </ul>
+    </div>
+
+    <main>
+
+        <div class="box">
+            <img src="mascara.jpg" alt="">
+            <h1>MASCARA</h1>
+            <p>Make up product used to enhance eyelashes. It make lashes look longer, thicker, darker and more defined.</p>
+        </div>
+
+        <div class="box">
+             <img src="foundation.webp" alt="">
+            <h1>FOUNDATION</h1>
+            <p>Make up product applied to the face to create an even skin tone and smooth base. It helps cover blemishes, dark spots, and redness.</p>
+        </div>
+
+        <div class="box">
+             <img src="eyeshadow.jpg" alt="">
+            <h1>EYESHADOW</h1>
+            <p>Make up product applied to the eyelids to add color, depth, and dimension to the eyes.</p>
+        </div>
+
+        <div class="box">
+             <img src="concealer.jpg" alt="">
+            <h1>CONCEALER</h1>
+            <p>Make up product used to cover imperfections on the face. It helps hide dark circles, pimple, spots, and redness.</p>
+        </div>
+
+        <div class="box">
+             <img src="lipstick.jpg" alt="">
+            <h1>LIPSTICK</h1>
+            <p>Make up product used to to add color, moisture to the lips.</p>
+        </div>
+
+        <div class="box">
+             <img src="blush.jpg" alt="">
+            <h1>BLUSH</h1>
+            <p>Make up product applied to the cheeks to add a natural flush of color and make the face look fresh and healthy.</p>
+        </div>
+           
+    </main>
+
+    <footer>
+        @ BEAUTY.MAKEUP PRODUCTS
+    </footer>
+
+</div>
+
+</body>
+</html>
